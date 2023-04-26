@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #010C15;
+}
+
+:root {
+--primary-color-1: #01080E;
+--primary-color-2: #011627;
+--primary-color-3: #011221;
+--color-secondary-1: #607B96;
+--color-secondary-2: #3C9D93;
+--color-secondary-3: #4D5BCE;
+--color-white: #FFFFFF;
+--color-accent-1: #FEA55F;
+--color-accent-2: #43D9AD;
+--color-accent-3: #E99287;
+--color-accent-4: #C98BDF;
+}
