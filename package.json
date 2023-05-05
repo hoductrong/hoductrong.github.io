@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"classname": "^0.0.0"
+		"classname": "^0.0.0",
+		"gsap": "^3.11.5"
 	}
 }
