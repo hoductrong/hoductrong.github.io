@@ -4,12 +4,10 @@
 
   const configs: HeaderConfig[] = [{
     name: '_hello',
-    // href: '/',
-    href: '#'
+    href: '/',
   }, {
     name: '_about-me',
     href: '/about',
-    // href: '#'
   }, {
     name: '_projects',
     // href: '/projects',

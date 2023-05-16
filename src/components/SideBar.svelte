@@ -17,31 +17,37 @@
 		{
 			name: 'personal-info',
 			onItemClick,
+			type: 'folder',
 			childs: [
 				{
 					name: 'bio',
 					icon: Folder3FillDOCUMENT,
-					onItemClick
+					onItemClick,
+					type: 'file'
 				},
 				{
 					name: 'interests',
 					icon: Folder3FillDOCUMENT,
-					onItemClick
+					onItemClick,
+					type: 'file'
 				},
 				{
 					name: 'education',
 					icon: Folder3FillDOCUMENT,
 					onItemClick,
+					type: 'folder',
 					childs: [
 						{
 							name: 'high-school',
 							icon: MarkdownFillDOCUMENT,
-							onItemClick
+							onItemClick,
+							type: 'file'
 						},
 						{
 							name: 'university',
 							icon: MarkdownFillDOCUMENT,
-							onItemClick
+							onItemClick,
+							type: 'file'
 						}
 					]
 				}
@@ -50,16 +56,19 @@
 		{
 			name: 'contacts',
 			onItemClick,
+			type: 'folder',
 			childs: [
 				{
 					name: 'user@gmail.com',
 					icon: MarkdownFillDOCUMENT,
-					onItemClick
+					onItemClick,
+					type: 'file'
 				},
 				{
 					name: '+396790841',
 					icon: MarkdownFillDOCUMENT,
-					onItemClick
+					onItemClick,
+					type: 'file'
 				}
 			]
 		}
