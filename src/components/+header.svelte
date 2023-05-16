@@ -8,8 +8,8 @@
     href: '#'
   }, {
     name: '_about-me',
-    // href: '/about',
-    href: '#'
+    href: '/about',
+    // href: '#'
   }, {
     name: '_projects',
     // href: '/projects',
