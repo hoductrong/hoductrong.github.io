@@ -7,15 +7,17 @@
 	import type { ComponentType } from 'svelte';
 	import { bioInfo, interestsInfo, noop } from './configs';
 
-  let component: ComponentType | null = null;
-  let props: Record<string, any> = {};
-
-	const onItemClick = (item: SideBarItemClickProps) => {
-		console.log(item);
-	};
   const onClose = () => {
     component = null;
   };
+
+  let component: ComponentType | null = EditorWindow;
+  let props: Record<string, any> = {
+		value: bioInfo,
+		title: 'bio',
+		onClose
+	};
+
   
   const items: SideBarItem[] = [
 		{
