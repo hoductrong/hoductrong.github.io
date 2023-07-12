@@ -1,7 +1,7 @@
 <script lang="ts">
   import Layout from '../__layout.svelte';
 	import SideBar from '../../components/SideBar.svelte';
-  import {Folder3FillDOCUMENT, MarkdownFillDOCUMENT} from 'svelte-remix'
+  import {Folder3FillDOCUMENT, TelegramFillLOGOS, MailLineBUSINESS} from 'svelte-remix'
   import EditorWindow from '../../components/EditorWindow.svelte';
 	import type { SideBarItem, SideBarItemClickProps } from '../../types';
 	import type { ComponentType } from 'svelte';
@@ -49,26 +49,6 @@
           },
 					type: 'file'
 				},
-				{
-					name: 'education',
-					icon: Folder3FillDOCUMENT,
-					onItemClick: noop,
-					type: 'folder',
-					childs: [
-						{
-							name: 'high-school',
-							icon: MarkdownFillDOCUMENT,
-							onItemClick,
-							type: 'file'
-						},
-						{
-							name: 'university',
-							icon: MarkdownFillDOCUMENT,
-							onItemClick,
-							type: 'file'
-						}
-					]
-				}
 			]
 		},
 		{
@@ -77,22 +57,26 @@
 			type: 'folder',
 			childs: [
 				{
-					name: 'user@gmail.com',
-					icon: MarkdownFillDOCUMENT,
-					onItemClick,
+					name: 'Email',
+					icon: MailLineBUSINESS,
+					onItemClick: () => {
+						window.open('mailto:trong.hoduc@gmail.com', '_blank');
+					},
 					type: 'file'
 				},
 				{
-					name: '+396790841',
-					icon: MarkdownFillDOCUMENT,
-					onItemClick,
+					name: 'Telegram',
+					icon: TelegramFillLOGOS,
+					onItemClick: () => {
+						window.open('https://t.me/trongho', '_blank');
+					},
 					type: 'file'
 				}
 			]
 		}
 	];
   $: renderedComponent = component;
-	
+
   export const prerender = true;
 </script>
 

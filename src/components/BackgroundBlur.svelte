@@ -2,7 +2,7 @@
   export let classNames: string;
 </script>
 
-<svg class="{classNames} w-[779px] h-[742px]" width="1114" height="1030" viewBox="0 0 1114 1030" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="{classNames} w-[650px] h-[600px]" width="1114" height="1030" viewBox="0 0 1114 1030" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g opacity="0.4" filter="url(#filter0_f_64_2564)">
   <path d="M723.947 855.519L510.032 804.132L420.664 739.469L447.227 568.957L622.649 549.391L621.041 427.647L823.309 373.392L953.603 404.691L871.166 670.797L743.893 703.987L723.947 855.519Z" fill="#4D5BCE"/>
   </g>

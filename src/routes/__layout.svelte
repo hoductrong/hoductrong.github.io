@@ -8,6 +8,11 @@
 <style >
 </style>
 
+<svelte:head>
+	<title>Ho Duc Trong - Portfolio</title>
+  <meta name="description" content="Welcome to my portfolio website.">
+</svelte:head>
+
 <div class="shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] bg-[#011627] m-20 rounded-lg border border-solid border-[#1E2D3D]">
   <Header />
   <slot></slot>

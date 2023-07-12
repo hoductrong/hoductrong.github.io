@@ -17,7 +17,7 @@
       <div class="awesome-link">
         <p class="text-[#607B96]">// complete the game to continue</p>
         <p class="text-[#607B96]">// you can also see it on my Github page</p>
-        <p><span class="text-[#4D5BCE]">const</span> <span class="text-[#43D9AD]">githubLink</span> <span class="text-white">=</span> <span class="text-[#E99287]">“https://github.com/example/url”</span></p>
+        <p><span class="text-[#4D5BCE]">const</span> <span class="text-[#43D9AD]">githubLink</span> <span class="text-white">=</span> <a href="https://github.com/hoductrong" class="text-[#E99287]">“https://github.com/hoductrong”</a></p>
       </div>
     </div>
     <div class="right-container relative">

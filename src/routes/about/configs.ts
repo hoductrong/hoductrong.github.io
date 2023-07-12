@@ -1,35 +1,24 @@
 export const bioInfo = `/**
 * About me
-* I have 5 years of еxperience in web
-* development lorem ipsum dolor sit amet, 
-* consectetur adipiscing elit, sed do eiusmod
-* tempor incididunt ut labore et dolore
-* magna aliqua. Ut enim ad minim veniam,
-* quis nostrud exercitation ullamco laboris
-* nisi ut aliquip ex ea commodo consequat.
-* Duis aute irure dolor in reprehenderit in
-*
-* Duis aute irure dolor in reprehenderit in
-* voluptate velit esse cillum dolore eu fugiat 
-* nulla pariatur. Excepteur sint occaecat 
-* officia deserunt mollit anim id est laborum.
+* Experienced ReactJS frontend developer with 
+* 4 years of expertise in building robust and
+* scalable web applications. Proficient in developing
+* responsive and intuitive user interfaces using
+* modern frontend technologies. Skilled in collaborating
+* with cross-functional teams to deliver
+* high-quality code and exceptional user experiences.
+* Strong problem-solving skills and a
+* passion for staying up-to-date with the latest
+* industry trends and best practices. Looking for
+* new opportunities to contribute to innovative
+* projects and drive impactful results.
 */`;
 
 export const interestsInfo = `/**
 * Interests
-* I have 5 years of еxperience in web
-* development lorem ipsum dolor sit amet, 
-* consectetur adipiscing elit, sed do eiusmod
-* tempor incididunt ut labore et dolore
-* magna aliqua. Ut enim ad minim veniam,
-* quis nostrud exercitation ullamco laboris
-* nisi ut aliquip ex ea commodo consequat.
-* Duis aute irure dolor in reprehenderit in
-*
-* Duis aute irure dolor in reprehenderit in
-* voluptate velit esse cillum dolore eu fugiat 
-* nulla pariatur. Excepteur sint occaecat 
-* officia deserunt mollit anim id est laborum.
+* Gaming
+* Exploring new technologies
+* Reading
 */`;
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
