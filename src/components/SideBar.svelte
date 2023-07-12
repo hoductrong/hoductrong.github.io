@@ -1,78 +1,13 @@
 <script lang="ts">
-	import type { SideBarItem, SideBarItemClickProps } from '../types';
+	import type { SideBarItem } from '../types';
 	import SideBarTreeItem from './SideBarTreeItem.svelte';
 	import {
 		TerminalBoxFillDEVELOPMENT,
 		User4FillUSER,
 		GamepadFillDEVICE,
-		Folder3FillDOCUMENT,
-		MarkdownFillDOCUMENT
 	} from 'svelte-remix';
 
-	const onItemClick = (item: SideBarItemClickProps) => {
-		console.log(item);
-	};
-
-	const items: SideBarItem[] = [
-		{
-			name: 'personal-info',
-			onItemClick,
-			type: 'folder',
-			childs: [
-				{
-					name: 'bio',
-					icon: Folder3FillDOCUMENT,
-					onItemClick,
-					type: 'file'
-				},
-				{
-					name: 'interests',
-					icon: Folder3FillDOCUMENT,
-					onItemClick,
-					type: 'file'
-				},
-				{
-					name: 'education',
-					icon: Folder3FillDOCUMENT,
-					onItemClick,
-					type: 'folder',
-					childs: [
-						{
-							name: 'high-school',
-							icon: MarkdownFillDOCUMENT,
-							onItemClick,
-							type: 'file'
-						},
-						{
-							name: 'university',
-							icon: MarkdownFillDOCUMENT,
-							onItemClick,
-							type: 'file'
-						}
-					]
-				}
-			]
-		},
-		{
-			name: 'contacts',
-			onItemClick,
-			type: 'folder',
-			childs: [
-				{
-					name: 'user@gmail.com',
-					icon: MarkdownFillDOCUMENT,
-					onItemClick,
-					type: 'file'
-				},
-				{
-					name: '+396790841',
-					icon: MarkdownFillDOCUMENT,
-					onItemClick,
-					type: 'file'
-				}
-			]
-		}
-	];
+	export let items: SideBarItem[];
 </script>
 
 <div class="left-sidebar border border-solid border-[#1E2D3D] w-80 flex flex-row text-[#607B96]">

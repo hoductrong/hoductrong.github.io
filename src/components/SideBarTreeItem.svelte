@@ -36,15 +36,15 @@
 			</div>
 			{#if item.childs !== undefined}
 				<div
-					class="list-child flex py-2 flex-col transition-[max-height opacity] duration-300 {activeStatusList[
+					class="list-child flex flex-col transition-[max-height opacity] duration-300 {activeStatusList[
 						currentIdx
 					]
-						? 'max-h-[500px] opacity-100'
+						? 'max-h-[500px] opacity-100 py-2'
 						: 'max-h-0 opacity-0 py-0 -z-10 relative'}"
 				>
 					{#each item.childs as itemsLevel2, idxl2}
 						<div  class="item folder-tree flex flex-col">
-							<div class="item-detail pt-2 px-2 flex flex-row gap-2">
+							<div class="item-detail pt-2 px-2 flex flex-row gap-2 cursor-pointer hover:text-white">
 								{#if itemsLevel2.type === 'folder'}
 									<ArrowRightSLineSYSTEM class="transition-transform duration-300 {activeStatusList[currentIdx * 10 + idxl2] ? 'rotate-90' : ''}"/>
 								{:else}
@@ -52,23 +52,25 @@
 								{/if}
 								<svelte:component this={itemsLevel2.icon} />
 								<span on:click={() => {
-									item.onItemClick(item);
+									itemsLevel2.onItemClick(itemsLevel2);
 									onClickDropdown(currentIdx * 10 + idxl2);
-								}} class="{itemsLevel2.type === 'folder' ? 'cursor-pointer' : ''}">{itemsLevel2.name}</span>
+								}} class="{itemsLevel2.type === 'folder' ? 'cursor-pointer' : ''} hover:text-white">{itemsLevel2.name}</span>
 							</div>
 							{#if itemsLevel2.childs !== undefined}
 								<div  class="list-child-level-2 pb-2 flex transition-[max-height opacity] duration-300 flex-col {activeStatusList[currentIdx * 10 + idxl2]
 								? 'max-h-[500px] opacity-100'
 								: 'max-h-0 opacity-0 py-0 -z-10 relative'}">
 									{#each itemsLevel2.childs as itemsLevel3}
-										<div class="item pt-2 px-2 flex flex-row gap-2">
+										<div class="item  ml-2 pt-2 px-2 flex flex-row gap-2">
 											{#if itemsLevel3.childs !== undefined}
 												<ArrowRightSLineSYSTEM />
 											{:else}
 												<div class="w-6" />
 											{/if}
 											<MarkdownFillDOCUMENT />
-											<span class="">{itemsLevel3.name}</span>
+											<span on:click={() => {
+												itemsLevel3.onItemClick(itemsLevel3);
+											}} class="cursor-pointer hover:text-white">{itemsLevel3.name}</span>
 										</div>
 									{/each}
 								</div>
