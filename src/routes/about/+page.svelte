@@ -92,6 +92,8 @@
 		}
 	];
   $: renderedComponent = component;
+	
+  export const prerender = true;
 </script>
 
 <Layout>
