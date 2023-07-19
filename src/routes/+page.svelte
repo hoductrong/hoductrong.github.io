@@ -1,5 +1,6 @@
 <script lang="ts">
   import SnakeGame from '../components/SnakeGame.svelte'
+  import SnakeGame2 from '../components/SnakeGameplay.svelte'
   import BackgroundBlur from "../components/BackgroundBlur.svelte";
   import Layout from './__layout.svelte'
 </script>
@@ -21,8 +22,8 @@
       </div>
     </div>
     <div class="right-container relative">
-      <svelte:component this={SnakeGame} />
-      <svelte:component classNames="absolute top-[-126px] left-[-50px]" this={BackgroundBlur} />
+      <svelte:component this={SnakeGame2} />
+      <!-- <svelte:component classNames="absolute top-[-126px] left-[-50px]" this={BackgroundBlur} /> -->
     </div>
   </div>
 </Layout>
