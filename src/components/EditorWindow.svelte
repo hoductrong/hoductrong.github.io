@@ -10,7 +10,7 @@
 		.map((_, index) => index + 1);
 </script>
 
-<div class="window-tab-bar border-l border-solid border-[#1E2D3D]">
+<div class="window-tab-bar">
 	<div class="window-tab-container border-b border-solid border-[#1E2D3D]">
 		<div
 			class="window-tab flex flex-row p-2 border-r border-solid border-[#1E2D3D] whitespace-nowrap w-fit mr-12"
