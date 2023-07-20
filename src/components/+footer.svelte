@@ -13,9 +13,12 @@
 			<a class="p-4 border-solid border-l border-r border-[#1E2D3D]" href="https://t.me/trongho"
 				><TelegramFillLOGOS /></a
 			>
+			<a class="p-4 lg:hidden border-solid border-[#1E2D3D]" href="https://t.me/trongho"
+				><GithubFillLOGOS /></a
+			>
 		</div>
 		<a
-			class="flex flex-row gap-1 py-4 px-6 border-solid border-l border-[#1E2D3D]"
+			class="lg:flex flex-row gap-1 py-4 px-6 hidden border-solid border-l border-[#1E2D3D]"
 			href="https://github.com/hoductrong">@tronghoduc<GithubFillLOGOS /></a
 		>
 	</div>

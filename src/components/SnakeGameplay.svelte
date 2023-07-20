@@ -230,9 +230,9 @@
 </script>
 
 <main
-	class="main text-white flex flex-col items-start justify-center p-4 rounded bg-[#173735FF] w-[510px] mx-auto"
+	class="main text-white lg:border border-[#0c1616] flex flex-col items-center lg:items-start justify-center p-4 rounded bg-[#173735FF] w-[330px] lg:w-[510px] mx-auto"
 >
-	<header>
+	<header class="w-full h-10 items-center justify-between flex flex-row">
 		<div>
 			Score: {bodyPositions.length !== 3 ? score : '0'}
 		</div>
@@ -240,7 +240,7 @@
 			High score: {highScore}
 		</div>
 	</header>
-	<div class="screen-container flex flex-row items-end gap-6">
+	<div class="screen-container flex flex-col lg:flex-row items-center lg:items-end gap-6">
 		<div class="canvasContainer">
 			<canvas id="canvas" width={canvasSize} height={canvasSize} />
 			{#if gameState === GAME.OVER || gameState === GAME.READY}
@@ -267,8 +267,10 @@
 			{/if}
 		</div>
 		<div class="w-48 h-36 px-3 py-4 flex flex-col justify-center rounded-lg bg-[#01142330]">
-			<span>// use keyboard</span>
-			<span>// arrows to play</span>
+			<span class="hidden lg:block">// use keyboard</span>
+			<span class="hidden lg:block">// arrows to play</span>
+			<span class="lg:hidden">// tap arrow</span>
+			<span class="lg:hidden whitespace-nowrap">// buttons to play</span>
 			<div class="buttons grid grid-cols-3 gap-1">
 				<div />
 				<button
@@ -299,20 +301,11 @@
 
 <style>
 	.main {
-		border-radius: 8px;
-		border: 1px solid #0c1616;
 		background: linear-gradient(154deg, rgba(23, 85, 83, 0.7) 0%, rgba(67, 217, 173, 0.09) 100%);
 		box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.3) inset;
 		backdrop-filter: blur(32px);
 	}
 
-	header {
-		width: 100%;
-		height: 42px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
 	#canvas {
 		/* border: 1px solid #000; */
 		border-radius: 8px;
