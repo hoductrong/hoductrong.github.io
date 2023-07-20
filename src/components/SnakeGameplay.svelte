@@ -8,7 +8,6 @@
 	} from 'svelte-remix';
 
 	onMount(() => {
-		console.log(2222);
 		reset();
 		document.addEventListener('keydown', listenForKeyboard);
 	});
