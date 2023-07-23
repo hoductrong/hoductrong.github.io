@@ -24,6 +24,7 @@
 	};
 
 	const refs: HTMLAnchorElement[] = [];
+	let headerContainerWidth: number = 0;
 	let activeTabIdx: number;
 	let x: number;
 	let totalWidth: number;
@@ -44,7 +45,6 @@
 	};
 
 	const onOpenMenuClick = () => {
-		console.log('click');
 		isActive = !isActive;
 	};
 
@@ -53,9 +53,9 @@
 	});
 </script>
 
-<div class="text-[#607B96] flex p-4 flex-row items-center border-solid border-b border-[#1E2D3D]">
+<div bind:clientWidth={headerContainerWidth} class="text-[#607B96] flex py-4 px-4 lg:py-0 justify-between flex-row items-center border-solid border-b border-[#1E2D3D]">
 	<span class="author-name w-80">trong-ho</span>
-	<div class="menu-mobile relative">
+	<div class="menu-mobile lg:hidden relative">
 		<div on:click={onOpenMenuClick} class="{isActive ? 'open' : ''} cursor-pointer" id="nav-icon3">
 			<span />
 			<span />
@@ -64,9 +64,10 @@
 		</div>
 
 		<div
+			style="width: {headerContainerWidth}px;"
 			class="sub-menu {isActive
-				? 'block'
-				: 'hidden'} border-t shadow shadow-[rgba(100, 100, 111, 0.2) 0px 7px 29px 0px] border-[#1E2D3D] absolute w-[330px] bg-[#011627] top-10 right-[-16px] flex flex-col"
+				? 'max-h-[500px] opacity-100'
+				: 'max-h-0 opacity-0 -z-10'} transition-[max-height opacity] duration-300 shadow shadow-[rgba(100, 100, 111, 0.2) 0px 7px 29px 0px] border-[#1E2D3D] absolute bg-[#011627] top-10 right-[-16px] flex flex-col"
 		>
 			{#each configs as config, i (i)}
 				<a
@@ -80,7 +81,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="flex hidden lg:block flex-row justify-between flex-1 items-center">
+	<div class="hidden lg:flex flex-row justify-between flex-1 items-center">
 		<div class="flex relative">
 			{#each configs as config, i (i)}
 				<a
@@ -88,7 +89,7 @@
 					on:click={() => onClick(i)}
 					class="{activeTabIdx === i
 						? 'text-white'
-						: ''} py-4 px-8 border-solid border-l border-[#1E2D3D]"
+						: ''} py-4 whitespace-nowrap px-8 border-solid border-l border-[#1E2D3D]"
 					href={config.href}>{config.name}</a
 				>
 			{/each}
@@ -97,7 +98,7 @@
 				class="line-bar absolute bottom-0 left-0 right-0 h-[3px] bg-[#FEA55F]"
 			/>
 		</div>
-		<a class="py-4 px-4 border-solid border-l border-[#1E2D3D]" href="mailto:trong.hoduc@gmail.com"
+		<a class="py-4 px-4 whitespace-nowrap border-solid border-l border-[#1E2D3D]" href="mailto:trong.hoduc@gmail.com"
 			>_contact-me</a
 		>
 	</div>
@@ -105,10 +106,10 @@
 
 <style>
 	#nav-icon3 {
-		width: 60px;
-		height: 45px;
+		width: 20px;
+		height: 20px;
 		position: relative;
-		margin: 50px auto;
+		margin: auto;
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
 		-o-transform: rotate(0deg);
@@ -125,15 +126,15 @@
 
 	#nav-icon3 span:nth-child(2),
 	#nav-icon3 span:nth-child(3) {
-		top: 18px;
+		top: 8px;
 	}
 
 	#nav-icon3 span:nth-child(4) {
-		top: 36px;
+		top: 16px;
 	}
 
 	#nav-icon3.open span:nth-child(1) {
-		top: 18px;
+		top: 8px;
 		width: 0%;
 		left: 50%;
 	}
@@ -153,8 +154,27 @@
 	}
 
 	#nav-icon3.open span:nth-child(4) {
-		top: 18px;
+		top: 8px;
 		width: 0%;
 		left: 50%;
 	}
+
+	#nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #607B96;
+    border-radius: 4px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
 </style>
