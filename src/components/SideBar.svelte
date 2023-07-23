@@ -6,8 +6,8 @@
 	export let items: SideBarItem[];
 </script>
 
-<div class="left-sidebar border-solid border-[#1E2D3D] w-80 flex flex-row text-[#607B96]">
-	<div class="tabs-list flex flex-col pl-6 pr-5 border-r border-solid border-[#1E2D3D]">
+<div class="left-sidebar border-solid border-[#1E2D3D] w-full lg:w-80 flex flex-row text-[#607B96]">
+	<div class="tabs-list hidden lg:flex flex-col pl-6 pr-5 border-r border-solid border-[#1E2D3D]">
 		<div class="py-4">
 			<TerminalBoxFillDEVELOPMENT size="24px" />
 		</div>

@@ -80,7 +80,7 @@
 </script>
 
 <Layout>
-	<div class="flex flex-row">
+	<div class="flex flex-col lg:flex-row">
 		<div class="left-sidebar flex flex-row text-[#607B96]">
 			<SideBar {items} />
 		</div>

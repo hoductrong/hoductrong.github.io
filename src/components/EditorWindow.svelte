@@ -26,13 +26,11 @@
 				<span>{row}</span>
 			{/each}
 		</div>
-		<textarea
-			bind:value
+		<pre
 			id="editor"
-			rows="30"
-			cols="50"
 			class="editor w-full p-2 bg-transparent border-none overflow-scroll outline-none shadow-none resize-none"
-		/>
+		>{value}
+	</pre>
 	</div>
 </div>
 

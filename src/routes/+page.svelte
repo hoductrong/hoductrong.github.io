@@ -5,7 +5,7 @@
 
 <Layout>
 	<div
-		class="main-container mb-20 md:mt-44 flex flex-col lg:flex-row md:flex-col justify-center gap:8 lg:gap-32"
+		class="main-container mb-20 xl:mt-44 flex flex-col xl:flex-row justify-center gap:8 lg:gap-32"
 	>
 		<div
 			class="left-container mt-20 flex flex-col p-4 lg:flex-col md:flex md:flex-col md:justify-center md:items-center"
