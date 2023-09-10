@@ -58,7 +58,7 @@
 	class="text-[#607B96] flex py-4 lg:py-0 justify-between flex-row items-center border-solid border-b border-[#1E2D3D]"
 >
 	<span class="author-name w-80 pl-4">trong-ho</span>
-	<div class="menu-mobile lg:hidden relative">
+	<div class="menu-mobile lg:hidden relative pr-4">
 		<div on:click={onOpenMenuClick} class="{isActive ? 'open' : ''} cursor-pointer" id="nav-icon3">
 			<span />
 			<span />

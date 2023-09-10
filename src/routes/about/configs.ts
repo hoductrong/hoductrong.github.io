@@ -1,17 +1,12 @@
 export const bioInfo = `/**
-* About me
-* Experienced ReactJS frontend developer with 
-* 4 years of expertise in building robust and
-* scalable web applications. Proficient in developing
-* responsive and intuitive user interfaces using
-* modern frontend technologies. Skilled in collaborating
-* with cross-functional teams to deliver
-* high-quality code and exceptional user experiences.
-* Strong problem-solving skills and a
-* passion for staying up-to-date with the latest
-* industry trends and best practices. Looking for
-* new opportunities to contribute to innovative
-* projects and drive impactful results.
+* Welcome to my page.
+* I'm Trong Ho, currently I'm working as a Frontend developer. 
+* 
+* Starting as a Backend Developer, I've learned a lot about how an application runs
+* from the ground up. Now, I'm embarking on a new journey as a Frontend Developer.
+* 
+* My passion is working and learning with the latest technologies, sharpening my knowledge
+* There will be a lot things to do, but I'm happy with it because I can improve every day
 */`;
 
 export const interestsInfo = `/**
