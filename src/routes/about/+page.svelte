@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Layout from '../__layout.svelte';
 	import SideBar from '../../components/SideBar.svelte';
 	import { Folder3FillDOCUMENT, TelegramFillLOGOS, MailLineBUSINESS } from 'svelte-remix';
 	import EditorWindow from '../../components/EditorWindow.svelte';
@@ -79,15 +78,13 @@
 	$: renderedComponent = component;
 </script>
 
-<Layout>
-	<div class="flex flex-col lg:flex-row">
-		<div class="left-sidebar flex flex-row text-[#607B96]">
-			<SideBar {items} />
-		</div>
-		<div
-			class="window-side border-l border-solid border-[#1E2D3D] w-full min-h-[750px] text-[#607B96]"
-		>
-			<svelte:component this={renderedComponent} {...props} />
-		</div>
+<div class="flex flex-col lg:flex-row">
+	<div class="left-sidebar flex flex-row text-[#607B96]">
+		<SideBar {items} />
 	</div>
-</Layout>
+	<div
+		class="window-side border-l border-solid border-[#1E2D3D] w-full min-h-[750px] text-[#607B96]"
+	>
+		<svelte:component this={renderedComponent} {...props} />
+	</div>
+</div>
