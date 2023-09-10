@@ -19,7 +19,7 @@
 		</div>
 		<a
 			class="lg:flex flex-row gap-1 py-4 px-6 hidden border-solid border-l border-[#1E2D3D]"
-			href="https://github.com/hoductrong">@tronghoduc<GithubFillLOGOS /></a
+			href="https://github.com/hoductrong">@hoductrong<GithubFillLOGOS /></a
 		>
 	</div>
 </div>

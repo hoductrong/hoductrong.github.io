@@ -12,7 +12,7 @@
 </svelte:head>
 
 <div
-	class="shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] m-4 lg:rounded-lg lg:m-20 bg-[#011627] rounded border border-solid border-[#1E2D3D]"
+	class="shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] max-w-7xl my-4 mx-auto lg:rounded-lg lg:my-20 bg-[#011627] rounded border border-solid border-[#1E2D3D]"
 >
 	<Header />
 	<slot />

@@ -3,51 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --primary:  transparent;
-  --secondary: #607B96;
-}
-
-*::-webkit-scrollbar-track, ::-webkit-scrollbar-corner
-{
-	/* -webkit-box-shadow: inset 0 0 6px red; */
-	/* border-radius: 10px; */
-	background-color: #011627;
-}
-
-*::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: green;
-}
-
-*::-webkit-scrollbar-thumb
-{
-	/* border-radius: 10px; */
-	/* -webkit-box-shadow: inset 0 0 6px yellow; */
-	background-color: #607B96;
+	--primary: transparent;
+	--secondary: #607b96;
 }
 
 * {
-  font-family: 'Fira Code', monospace;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	font-family: 'Fira Code', monospace;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background: #010C15;
+	background: #010c15;
+}
+
+html {
+	overflow: scroll;
 }
 
 :root {
---primary-color-1: #01080E;
---primary-color-2: #011627;
---primary-color-3: #011221;
---color-secondary-1: #607B96;
---color-secondary-2: #3C9D93;
---color-secondary-3: #4D5BCE;
---color-white: #FFFFFF;
---color-accent-1: #FEA55F;
---color-accent-2: #43D9AD;
---color-accent-3: #E99287;
---color-accent-4: #C98BDF;
+	--primary-color-1: #01080e;
+	--primary-color-2: #011627;
+	--primary-color-3: #011221;
+	--color-secondary-1: #607b96;
+	--color-secondary-2: #3c9d93;
+	--color-secondary-3: #4d5bce;
+	--color-white: #ffffff;
+	--color-accent-1: #fea55f;
+	--color-accent-2: #43d9ad;
+	--color-accent-3: #e99287;
+	--color-accent-4: #c98bdf;
 }

@@ -53,8 +53,11 @@
 	});
 </script>
 
-<div bind:clientWidth={headerContainerWidth} class="text-[#607B96] flex py-4 px-4 lg:py-0 justify-between flex-row items-center border-solid border-b border-[#1E2D3D]">
-	<span class="author-name w-80">trong-ho</span>
+<div
+	bind:clientWidth={headerContainerWidth}
+	class="text-[#607B96] flex py-4 lg:py-0 justify-between flex-row items-center border-solid border-b border-[#1E2D3D]"
+>
+	<span class="author-name w-80 pl-4">trong-ho</span>
 	<div class="menu-mobile lg:hidden relative">
 		<div on:click={onOpenMenuClick} class="{isActive ? 'open' : ''} cursor-pointer" id="nav-icon3">
 			<span />
@@ -75,7 +78,7 @@
 					on:click={() => onClick(i)}
 					class="{activeTabIdx === i
 						? 'text-white'
-						: ''} py-4 px-8 border-b border-l border-[#1E2D3D]"
+						: ''} py-4 px-8 border-b border-l transition-all hover:text-white border-[#1E2D3D]"
 					href={config.href}>{config.name}</a
 				>
 			{/each}
@@ -89,7 +92,7 @@
 					on:click={() => onClick(i)}
 					class="{activeTabIdx === i
 						? 'text-white'
-						: ''} py-4 whitespace-nowrap px-8 border-solid border-l border-[#1E2D3D]"
+						: ''} py-4 whitespace-nowrap px-8 border-solid transition-all hover:text-white border-l border-[#1E2D3D]"
 					href={config.href}>{config.name}</a
 				>
 			{/each}
@@ -98,8 +101,9 @@
 				class="line-bar absolute bottom-0 left-0 right-0 h-[3px] bg-[#FEA55F]"
 			/>
 		</div>
-		<a class="py-4 px-4 whitespace-nowrap border-solid border-l border-[#1E2D3D]" href="mailto:trong.hoduc@gmail.com"
-			>_contact-me</a
+		<a
+			class="py-4 px-4 whitespace-nowrap border-solid border-l border-[#1E2D3D]"
+			href="mailto:trong.hoduc@gmail.com">_contact-me</a
 		>
 	</div>
 </div>
@@ -160,21 +164,21 @@
 	}
 
 	#nav-icon3 span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: #607B96;
-    border-radius: 4px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
-}
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background: #607b96;
+		border-radius: 4px;
+		opacity: 1;
+		left: 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: 0.25s ease-in-out;
+		-moz-transition: 0.25s ease-in-out;
+		-o-transition: 0.25s ease-in-out;
+		transition: 0.25s ease-in-out;
+	}
 </style>

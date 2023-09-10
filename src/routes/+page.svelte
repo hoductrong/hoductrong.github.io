@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SnakeGame from '../components/SnakeGameplay.svelte';
 	import Layout from './__layout.svelte';
+	import Typewriter from 'svelte-typewriter';
 </script>
 
 <Layout>
@@ -11,10 +12,18 @@
 			class="left-container mt-20 flex flex-col p-4 lg:flex-col md:flex md:flex-col md:justify-center md:items-center"
 		>
 			<div class="developer-info mb-72 md:mb-20">
-				<p class="text-white font-[450] leading-6">Hi all. I am</p>
-				<p class="text-white font-normal text-6xl leading-[5rem]">Trong Ho</p>
-				<p class="text-[#4D5BCE] text-xl font-[450] lg:text-3xl leading-10">
-					&gt; Front-end developer
+				<p class="text-white font-[450] min-h-[24px] leading-6">
+					<Typewriter mode="cascade" wordInterval={2000} interval={70}>Hi all. I am</Typewriter>
+				</p>
+				<p class="text-white font-normal text-6xl min-h-[5rem] leading-[5rem]">
+					<Typewriter mode="cascade" wordInterval={2000} delay={1800} interval={70}>
+						Trong Ho
+					</Typewriter>
+				</p>
+				<p class="text-[#4D5BCE] text-xl min-h-[36px] font-[450] lg:text-3xl leading-10">
+					<Typewriter mode="cascade" wordInterval={2000} delay={3500} interval={70}>
+						&gt; Front-end developer
+					</Typewriter>
 				</p>
 			</div>
 			<div class="awesome-link">
@@ -37,4 +46,8 @@
 </Layout>
 
 <style>
+	.developer-info {
+		--cursor-color: #fff;
+		--cursor-width: 4px;
+	}
 </style>

@@ -28,8 +28,7 @@
 		</div>
 		<pre
 			id="editor"
-			class="editor w-full p-2 bg-transparent border-none overflow-scroll outline-none shadow-none resize-none"
-		>{value}
+			class="editor w-full p-2 bg-transparent border-none overflow-scroll outline-none shadow-none resize-none">{value}
 	</pre>
 	</div>
 </div>
@@ -37,5 +36,23 @@
 <style>
 	.line-counter {
 		direction: rtl;
+	}
+
+	*::-webkit-scrollbar-track,
+	::-webkit-scrollbar-corner {
+		/* -webkit-box-shadow: inset 0 0 6px red; */
+		/* border-radius: 10px; */
+		background-color: #011627;
+	}
+
+	*::-webkit-scrollbar {
+		width: 12px;
+		background-color: green;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		/* border-radius: 10px; */
+		/* -webkit-box-shadow: inset 0 0 6px yellow; */
+		background-color: #607b96;
 	}
 </style>

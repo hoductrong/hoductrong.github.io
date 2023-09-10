@@ -47,7 +47,7 @@
 					{#each item.childs as itemsLevel2, idxl2}
 						<div class="item folder-tree flex flex-col">
 							<div
-								class="item-detail pt-2 px-2 flex flex-row gap-2 cursor-pointer hover:text-white"
+								class="item-detail pt-2 px-2 flex flex-row gap-2 cursor-pointer transition-all hover:text-white"
 							>
 								{#if itemsLevel2.type === 'folder'}
 									<ArrowRightSLineSYSTEM
