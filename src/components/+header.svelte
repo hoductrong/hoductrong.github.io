@@ -29,6 +29,7 @@
 	let x: number;
 	let totalWidth: number;
 	let isActive: boolean = false;
+	let containerRef: HTMLDivElement | null;
 
 	$: refs;
 	$: x = refs[activeTabIdx]?.offsetWidth ?? 0;
@@ -39,14 +40,27 @@
 			totalWidth += element.offsetWidth;
 		}
 	}
+	$: isActive;
 
 	const onClick = (index: number) => {
 		activeTabIdx = index;
+		closeMenu();
 	};
 
 	const onOpenMenuClick = () => {
 		isActive = !isActive;
 	};
+
+	const closeMenu = () => {
+		isActive = false;
+	};
+
+	if (typeof window !== 'undefined')
+		window?.addEventListener('mousedown', (event) => {
+			if (isActive && !containerRef?.contains?.(event.target as Node)) {
+				closeMenu();
+			}
+		});
 
 	onMount(() => {
 		activeTabIdx = configs.findIndex((config) => config.href === $page.url.pathname);
@@ -58,7 +72,7 @@
 	class="text-[#607B96] flex py-4 lg:py-0 justify-between flex-row items-center border-solid border-b border-[#1E2D3D]"
 >
 	<span class="author-name w-80 pl-4">trong-ho</span>
-	<div class="menu-mobile lg:hidden relative pr-4">
+	<div bind:this={containerRef} class="menu-mobile lg:hidden relative pr-4">
 		<div on:click={onOpenMenuClick} class="{isActive ? 'open' : ''} cursor-pointer" id="nav-icon3">
 			<span />
 			<span />
@@ -70,7 +84,7 @@
 			style="width: {headerContainerWidth}px;"
 			class="sub-menu {isActive
 				? 'max-h-[500px] opacity-100'
-				: 'max-h-0 opacity-0 -z-10'} transition-[max-height opacity] duration-300 shadow shadow-[rgba(100, 100, 111, 0.2) 0px 7px 29px 0px] border-[#1E2D3D] absolute bg-[#011627] top-10 right-[-16px] flex flex-col"
+				: 'max-h-0 opacity-0 -z-10'} transition-[max-height opacity] duration-300 shadow shadow-[rgba(100, 100, 111, 0.2) 0px 7px 29px 0px] border-[#1E2D3D] absolute bg-[#011627] top-10 right-[0] flex flex-col"
 		>
 			{#each configs as config, i (i)}
 				<a

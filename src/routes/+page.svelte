@@ -1,6 +1,5 @@
 <script lang="ts">
 	import SnakeGame from '../components/SnakeGameplay.svelte';
-	import Layout from './+layout.svelte';
 	import Typewriter from 'svelte-typewriter';
 </script>
 

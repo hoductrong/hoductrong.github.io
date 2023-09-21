@@ -13,7 +13,7 @@
 </svelte:head>
 
 <div
-	class="shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] overflow-hidden max-w-7xl my-4 mx-auto lg:rounded-lg lg:my-20 bg-[#011627] rounded border border-solid border-[#1E2D3D]"
+	class="shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] h-[750px] mx-2 md:mx-4 lg:mx-auto overflow-hidden max-w-7xl my-4 lg:rounded-lg lg:my-20 bg-[#011627] rounded border border-solid border-[#1E2D3D]"
 >
 	<Header />
 	{#key data.url}

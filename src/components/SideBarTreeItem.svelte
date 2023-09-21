@@ -1,18 +1,17 @@
 <script lang="ts">
 	import {
-		ArrowDropDownFillSYSTEM,
 		ArrowDropRightFillSYSTEM,
 		ArrowRightSLineSYSTEM,
-		ArrowDownSLineSYSTEM,
-		MarkdownFillDOCUMENT,
-		Folder3FillDOCUMENT
+		MarkdownFillDOCUMENT
 	} from 'svelte-remix';
 
 	import type { SideBarItem } from '../types';
 
 	let activeStatusList: boolean[] = [];
+	let activeIdx = 0;
 	const onClickDropdown = (idx: number) => {
 		activeStatusList[idx] = !activeStatusList[idx];
+		activeIdx = idx;
 	};
 
 	export let items: SideBarItem[];
@@ -47,7 +46,9 @@
 					{#each item.childs as itemsLevel2, idxl2}
 						<div class="item folder-tree flex flex-col">
 							<div
-								class="item-detail pt-2 px-2 flex flex-row gap-2 cursor-pointer transition-all hover:text-white"
+								class="item-detail {currentIdx * 10 + idxl2 === activeIdx
+									? 'text-white'
+									: null} pt-2 px-2 flex flex-row gap-2 cursor-pointer transition-all hover:text-white"
 							>
 								{#if itemsLevel2.type === 'folder'}
 									<ArrowRightSLineSYSTEM
